@@ -33,7 +33,7 @@ import json
 PIL图片加载器：输入路径，返回PIL图片格式
 """
 def _default_loader(path):#PIL图片加载器
-    return Image.open(path).convert('RGB')
+    return transforms.ToTensor(Image.open(path).convert('RGB'))
 
 """
 COCO数据集加载器：路径从配置文件读取，返回列表
